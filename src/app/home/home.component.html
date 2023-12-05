@@ -1,47 +1,182 @@
 <body class="bg-gray-100 h-100% flex items-center justify-start p-5">
-
-<aside class="bg-white h-screen left-0 p-6 shadow-lg w-30 flex flex-col items-center">
-
-     <h2 class="text-4xl mt-16 mb-5 font-bold ">
-        Talky
-    </h2>
+  <aside
+    class="bg-white h-screen  p-2 shadow-lg rounded-lg w-30 flex flex-col items-center fixed top-2 left-4 right-140"
+  >
+    <h2 class="text-4xl mt-16 mb-5 font-bold">Talky</h2>
 
     <div class="mb-16 mt-16 flex">
-        <i class="fas fa-bars text-4xl text-gray-600"></i>
-        
+      <i class="fas fa-bars text-3xl text-gray-600"></i>
     </div>
 
     <div class="mb-16">
-        <i class="fas fa-home text-4xl text-gray-600"></i>
+      <i class="fas fa-home text-3xl text-gray-600"></i>
     </div>
 
     <div class="mb-16">
-        <i class="fas fa-search text-4xl text-gray-600"></i>
+      <i class="fas fa-search text-3xl text-gray-600"></i>
     </div>
 
     <div class="mb-16">
-        <i class="fas fa-plus text-4xl text-gray-600"></i>
+      <i class="fas fa-plus text-3xl text-gray-600"></i>
     </div>
 
-    <div>
-        <img src="https://placekitten.com/40/40" alt="User Profile" class="w-12 h-12 rounded-full mb-16">
+    <div class="flex">
+      <img
+        routerLink = "/profile"
+        src="https://placekitten.com/40/40"
+        alt="User Profile"
+        class="w-12 h-12 cursor-pointer rounded-full mb-16"
+      />
+      <p class="text-4xl text-gray-600 font-bold"></p>
     </div>
-</aside>
-<div class="">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzAAz15VhHBCdia2fIeYNGC7QKvB_xjKVG-g&usqp=CAU" alt="Largetha" class=" w-full h-100 ml-16 top-3 mb-35 object-cover rounded-lg">
-    <h2 class="mb-40 ml-16 text-2xl font-bold">
-        The second raid to the East was creepy but a nice experince
+  </aside>
+  <div class="ml-16">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzAAz15VhHBCdia2fIeYNGC7QKvB_xjKVG-g&usqp=CAU"
+      alt="Largetha"
+      class="w-full h-100 ml-16 top-3 mb-35 object-cover rounded-lg"
+    />
+    <h2 class="mb-10 mt-6 ml-16 text-2xl font-bold">
+      The second raid to the East was creepy but a nice experince
     </h2>
 
-    <div class="flex ml-16 mb-50 ">
-        <img src="https://placekitten.com/40/40" alt="User Profile" class="w-12 h-12 rounded-full mb-16">
-        <p class="font-bold mr-14">Joshua Ochieng</p>
-        <i class="fas fa-thumbs-up text-4xl text-gray-600">0</i>
-        <i class="fas fa-thumbs-down text-4xl text-gray-600 ml-7">0</i>
-        <i class="fas fa-comment text-4xl text-gray-600 ml-16">0</i>
+    <div class="flex ml-16 mt-5 mb-2">
+      <img
+        src="https://placekitten.com/40/40"
+        alt="User Profile"
+        class="w-12 h-12 rounded-full mb-16"
+      />
+      <p class="font-bold mr-14">Joshua Ochieng</p>
+      <button class="mb-14 mr-4 rounded-lg p-5 bg-gray-200 text-black font-bold">Follow</button>
+      <i class="fas fa-thumbs-up text-3xl text-gray-600 mt-3">0</i>
+      <i class="fas fa-thumbs-down text-3xl text-gray-600 ml-7 mt-3">0</i>
+      <i class="fas fa-comment text-3xl text-gray-600 ml-16 mt-3">0</i>
     </div>
-</div>
-
+    <div class="ml-16 ">
+        <h2 class="ml-10 mb-2 font-bold text-gray-800 border-b border-gray-300 pb-2">
+            Comments
+        </h2>
+        <div class="flex flex-col">
+        <div class="flex mt-4 ml-3">
+        <img
+          src="https://placekitten.com/40/40"
+          alt="User Profile"
+          class="w-7 h-7 rounded-full mb-2"
+        />
+        <p class="font-bold mr-14">Joshua Ochieng</p>
+      </div >
+      <p class=" mb-2 ml-3">
+         I was really afraid they were going to be defeated but they never dissapoint
+      </p>
+      <div class="ml-5">
+           <i class="fas fa-thumbs-up text-2xl text-gray-600 mt-3">0</i>
+      <i class="fas fa-thumbs-down text-2xl text-gray-600 ml-7 mt-3">0</i>
+      <i class="fas fa-comment text-2xl text-gray-600 ml-16 mt-3">0</i>
+      </div>
+      </div>
+    
+        <!-- <p>
+            I really like how largetha was agressive and even outdo some men
+        </p>
+        <p>
+            I felt like joning them and helping them, they were just amazing and fun
+        </p>  -->
+    </div>
+  </div>
+  <div class="ml-16 mb-10">
+    <div class="flex">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzAAz15VhHBCdia2fIeYNGC7QKvB_xjKVG-g&usqp=CAU"
+        alt=""
+        class="ml-10 mb-6 w-50 rounded-lg h-50"
+      />
+      <div class="flex flex-col">
+        <div class="flex mt-4 ml-3">
+        <img
+          src="https://placekitten.com/40/40"
+          alt="User Profile"
+          class="w-12 h-12 rounded-full mb-6"
+        />
+        <p class="font-bold mr-14">Joshua Ochieng</p>
+      </div >
+      <p class="font-bold mb-9 ml-3">
+        The second raid to the East was crepy but a nice experience
+      </p>
+      </div>
+      
+    </div>
+        <div class="flex">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvKKpCgPll2BvzQeqxTehwIhUJz9-aYs8Mbg&usqp=CAU"
+        alt=""
+        class="ml-10 mb-6 w-50 rounded-lg h-50"
+      />
+      <div class="flex flex-col">
+        <div class="flex mt-4 ml-3">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQePqfqtbfutgaTjiuNIt0rbYQfE-DH7oykJg&usqp=CAU"
+          alt="User Profile"
+          class="w-12 h-12 rounded-full mb-6"
+        />
+        <p class="font-bold mr-14">Jackstone Juma</p>
+      </div >
+      <p class="font-bold mb-9 ml-3">
+        Being in control of the kingdom as the queen is kinda confusing but i liked the going
+      </p>
+      </div>
+      
+    </div>
+        <div class="flex">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDqR9zkmiVUpVRj9RsQYlkU0e3t6nHURaqEA&usqp=CAU"
+        alt=""
+        class="ml-10 mb-6 w-50 rounded-lg h-50"
+      />
+      <div class="flex flex-col">
+        <div class="flex mt-4 ml-3">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqiBdkOYHUmQUEwenzTQOjfVoYQXCi6mel1g&usqp=CAU"
+          alt="User Profile"
+          class="w-12 h-12 rounded-full mb-6"
+        />
+        <p class="font-bold mr-14">Eugene Wamalwa</p>
+      </div >
+      <p class="font-bold mb-9 ml-3">
+        Leaving bjorn Ironside back at home alone as we both go to the raid
+      </p>
+      </div>
+      
+    </div>
+        <div class="flex">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Aj0XLUbH3_Eg_Mkug6GnliH0K8uVdS5Heg&usqp=CAU"
+        alt=""
+        class="ml-10 mb-6 w-50 rounded-lg h-50"
+      />
+      <div class="flex flex-col">
+        <div class="flex mt-4 ml-3">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxbSy_a1gK-cWeQBL5b2qOQfLtr77-kV-m1bAmTDdyXjvdCTkaZavGu3GUjwHxxeVMWwM&usqp=CAU"
+          alt="User Profile"
+          class="w-12 h-12 rounded-full mb-6"
+        />
+        <p class="font-bold mr-14">Ian Dancun</p>
+      </div >
+      <p class="font-bold mb-9 ml-3">
+        No retreat no surrender
+      </p>
+      </div>
+      
+    </div>
+    <!-- <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Aj0XLUbH3_Eg_Mkug6GnliH0K8uVdS5Heg&usqp=CAU"
+      alt=""
+      class="ml-10 mb-6 w-50 rounded-lg h-50"
+    />
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDqR9zkmiVUpVRj9RsQYlkU0e3t6nHURaqEA&usqp=CAU"
+      alt=""
+      class="ml-10 mb-12 w-50 rounded-lg h-50"
+    /> -->
+  </div>
 </body>
-
-
