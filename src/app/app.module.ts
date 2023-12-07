@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { CommentsComponent } from './comments/comments.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { PostsComponent } from './posts/posts.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PostsComponent } from './posts/posts.component';
     ProfileComponent,
     CommentsComponent,
     UpdateUserComponent,
-    PostsComponent
+    PostsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
