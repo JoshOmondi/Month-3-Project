@@ -1,35 +1,30 @@
-<div
-  class="bg-gray-100 p-2 shadow-lg w-full rounded-lg  flex flex-row justify-between items-center border-b border-gray-300 top-2 left-4 right-4 rounded-lg"
->
-  <h2 class="text-4xl mb-5 ml-5 font-bold">Talky</h2>
+<div class="bg-gray-100 p-2 shadow-lg w-full rounded-lg flex flex-col md:flex-row justify-between items-center border-b border-gray-300 top-2 left-4 right-4 rounded-lg">
+  <h2 class="text-4xl mb-2 md:mb-0 ml-5 font-bold">Talky</h2>
 
-  <div class="flex items-center">
+  <div class="flex items-center mt-2 md:mt-0">
     <input
       type="text"
       placeholder="Search"
-      class="border border-gray-300 p-2 rounded-l-md pl-20 pr-20 focus:outline-none"
+      class="border border-gray-300 p-2 rounded-l-md pl-5 pr-5 md:pl-10 md:pr-10 focus:outline-none"
     />
     <button class="bg-gray-300 p-2 rounded-r-md">
-      <i class="fas fa-search text-gray-600"></i>
+      <i class="fas fa-search w-6 md:w-9 text-gray-600"></i>
     </button>
   </div>
 
-
-  
-
-  <div class="ml-15">
+  <div class="mt-2 md:mt-0 md:ml-15">
     <i
       routerLink="/posts"
-      class="fas fa-plus text-3xl cursor-pointer text-gray-600"
+      class="fas fa-plus text-xl md:text-3xl cursor-pointer text-gray-600"
     ></i>
   </div>
 
-  <div class="flex">
+  <div class="flex mt-2 md:mt-0">
     <img
       routerLink="/profile"
       src="https://placekitten.com/40/40"
       alt="User Profile"
-      class="w-12 h-12 cursor-pointer mr-10 rounded-full"
+      class="w-8 h-8 md:w-12 md:h-12 cursor-pointer mr-2 md:mr-10 rounded-full"
     />
   </div>
 </div>
