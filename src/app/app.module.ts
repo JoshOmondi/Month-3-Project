@@ -11,6 +11,7 @@ import { CommentsComponent } from './comments/comments.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { PostsComponent } from './posts/posts.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     CommentsComponent,
     UpdateUserComponent,
     PostsComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

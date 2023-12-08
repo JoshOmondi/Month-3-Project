@@ -17,7 +17,8 @@ const routes: Routes = [
   {path: 'comments', component:CommentsComponent},
   {path: 'posts', component:PostsComponent},
   {path: 'update-user', component:UpdateUserComponent},
-  {path: 'navbar', component:NavbarComponent}
+  {path: 'navbar', component:NavbarComponent},
+  {path:'update-user', component:UpdateUserComponent}
 ];
 
 @NgModule({
