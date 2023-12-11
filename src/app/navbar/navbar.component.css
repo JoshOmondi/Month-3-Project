@@ -1,0 +1,7 @@
+.dropdown-content {
+  @apply: absolute hidden bg-white border rounded shadow-lg mt-2;
+}
+
+.dropdown-content.show {
+  @apply: block;
+}
