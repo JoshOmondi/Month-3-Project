@@ -8,12 +8,14 @@
             />
         </div>
 
-        <div class="w-full md:w-2/3 p-4 md:p-8 bg-gray-100">
+        <div class="w-full md:w-2/3 p-4 md:p-8 bg-gray-100 "[ngClass]="{'success-message': successMessage, 'error-message': errorMessage}" class="message">
+        {{ successMessage || errorMessage }}">
             <h2 class="text-3xl md:ml-20 font-semibold mt-8 mb-6 md:mt-5 md:mb-10">Sign In</h2>
-            <form class="flex flex-col h-full justify-between">
+            <form class="flex flex-col h-full justify-between "[formGroup]="logInUserForm" (ngSubmit)="loginUser()">
                 <div class="mb-4">
                     <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
                     <input
+                        formControlName="email"
                         type="email"
                         id="email"
                         name="email"
@@ -24,6 +26,7 @@
                 <div class="mb-4">
                     <label for="password" class="block text-sm font-medium text-gray-600">Password</label>
                     <input
+                        formControlName="password"
                         type="password"
                         id="password"
                         name="password"
@@ -32,7 +35,7 @@
                 </div>
 
                 <button
-                    routerLink=""
+                   
                     type="submit"
                     class="bg-blue-500 text-white px-4 py-2 rounded-md"
                 >

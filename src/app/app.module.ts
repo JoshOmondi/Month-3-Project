@@ -12,6 +12,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { PostsComponent } from './posts/posts.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     UpdateUserComponent,
     PostsComponent,
     NavbarComponent,
+    SearchPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

@@ -10,10 +10,11 @@
 
         <div class="w-full md:w-2/3 p-4 md:p-8 bg-gray-100">
             <h2 class="text-3xl font-semibold mt-8 mb-6 md:mt-2 md:ml-10 md:mb-8">Sign Up</h2>
-            <form class="flex flex-col h-full justify-between">
+            <form class="flex flex-col h-full justify-between "[formGroup]="registrationForm" (ngSubmit)="registerUser()">
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-medium text-gray-600">Name</label>
                     <input
+                        formControlName="name"
                         type="name"
                         id="name"
                         name="name"
@@ -24,6 +25,7 @@
                 <div class="mb-4">
                     <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
                     <input
+                        formControlName="email"
                         type="email"
                         id="email"
                         name="email"
@@ -34,6 +36,7 @@
                 <div class="mb-4">
                     <label for="password" class="block text-sm font-medium text-gray-600">Password</label>
                     <input
+                        formControlName="password"
                         type="password"
                         id="password"
                         name="password"
@@ -44,6 +47,7 @@
                 <div class="mb-4">
                     <label for="confirm-password" class="block text-sm font-medium text-gray-600">Confirm Password</label>
                     <input
+                        formControlName="confirm-password"
                         type="password"
                         id="confirm-password"
                         name="confirm-password"
@@ -52,7 +56,7 @@
                 </div>
 
                 <button
-                    routerLink="/login"
+            
                     type="submit"
                     class="bg-blue-500 text-white px-4 py-2 rounded-md"
                 >
@@ -60,7 +64,7 @@
                 </button>
             </form>
 
-            <p class="mb-5 md:mb-10 text-center flex justify-between text-sm text-black">
+            <p class="mb-5 md:mb-10 text-center flex  text-sm text-black">
                 Already have an account?
                 <a
                     routerLink="/login"

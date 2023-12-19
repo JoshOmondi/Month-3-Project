@@ -11,8 +11,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
   {path: 'login', component:LoginComponent},
-  {path: 'register', component:RegisterComponent},
-  {path: '', component:HomeComponent},
+  {path: '', component:RegisterComponent},
+  {path: 'home', component:HomeComponent},
   {path: 'profile', component:ProfileComponent},
   {path: 'comments', component:CommentsComponent},
   {path: 'posts', component:PostsComponent},
