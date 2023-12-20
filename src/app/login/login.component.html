@@ -8,8 +8,7 @@
             />
         </div>
 
-        <div class="w-full md:w-2/3 p-4 md:p-8 bg-gray-100 "[ngClass]="{'success-message': successMessage, 'error-message': errorMessage}" class="message">
-        {{ successMessage || errorMessage }}">
+        <div class="w-full md:w-2/3 p-4 md:p-8 bg-gray-100 ">
             <h2 class="text-3xl md:ml-20 font-semibold mt-8 mb-6 md:mt-5 md:mb-10">Sign In</h2>
             <form class="flex flex-col h-full justify-between "[formGroup]="logInUserForm" (ngSubmit)="loginUser()">
                 <div class="mb-4">
@@ -35,7 +34,7 @@
                 </div>
 
                 <button
-                   
+                    
                     type="submit"
                     class="bg-blue-500 text-white px-4 py-2 rounded-md"
                 >
@@ -47,7 +46,7 @@
                 <a href="#" class="font-semibold text-black hover:text-blue-500">Forgot password?</a>
             </div>
 
-            <p class="mb-5 md:mb-20 text-center flex justify-between text-sm text-black">
+            <p class="mb-5 md:mb-20 text-center flex  text-sm text-black">
                 Don't have an account?
                 <a
                     routerLink="/register"

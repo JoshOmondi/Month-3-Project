@@ -12,7 +12,6 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent {
   logInUserForm!: FormGroup;
-
   errorMessage!: string;
   successMessage!: string;
   loggingIn: boolean = false;
@@ -25,6 +24,7 @@ export class LoginComponent {
     private userService: UserService,
     private router: Router
   ) {
+    console.log('RegisterComponent constructor');
     this.logInUserForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
@@ -46,23 +46,19 @@ export class LoginComponent {
         localStorage.setItem('token', token);
 
         console.log('Login successful. Token:', token);
+         this.router.navigate(['home']);
 
         this.userService.checkDetails().subscribe(
           (user: User) => {
             console.log('User:', user);
             this.loggedInState = true;
             this.successMessage = 'Logged in successfully.';
+            this.router.navigate(['home']);
             setTimeout(() => {
               this.successMessage = '';
               this.loggingIn = false;
 
-              // localStorage.setItem('')
 
-              if (user.role === 'Admin') {
-                this.router.navigate(['admin']);
-              } else if (user.role === 'customer') {
-                this.router.navigate(['user']);
-              }
             }, 2000);
           },
           (error) => {

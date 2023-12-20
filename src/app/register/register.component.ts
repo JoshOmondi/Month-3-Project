@@ -21,6 +21,7 @@ export class RegisterComponent {
       email: ['', [Validators.required]],
       profileImage: ['', [Validators.required]],
       password: ['', [Validators.required]],
+      confirmpassword: ['', [Validators.required]],
     });
   }
 

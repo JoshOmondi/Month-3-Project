@@ -9,17 +9,14 @@ import { tap, catchError } from 'rxjs/operators';
 })
 export class PostService {
   constructor(private http: HttpClient) {}
+  private apiUrl = 'http://localhost:4000/posts/all';
 
   createPost(Post: Posts): Observable<any> {
     return this.http.post('http://localhost:4000/posts/create', Post);
   }
 
-  getPosts(): Observable<Posts[]> {
-    return this.http.get<Posts[]>('http://localhost:4000/posts/all', {
-      headers: {
-        'Content-type': 'application/json',
-      },
-    });
+  getPosts(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
   }
 
   updatePostById(postID: string, updatedPost: Posts): Observable<Posts> {
@@ -28,12 +25,12 @@ export class PostService {
 
     return this.http
       .put<Posts>(
-        `http://localhost:3500/products/update/${postID}`,
+        `http://localhost:4000/posts/update/${postID}`,
         updatedPost
       )
       .pipe(
         tap((updatedPost: Posts) => {
-          console.log('Product updated on the server:', updatedPost);
+          console.log('Post updated on the server:', updatedPost);
         }),
         catchError((error) => {
           console.error('Error updating product on the server:', error);
@@ -45,11 +42,11 @@ export class PostService {
   getSinglePost(postID: string) {
     console.log(postID);
 
-    return this.http.get(`http://localhost:3500/products/single/${postID}`);
+    return this.http.get(`http://localhost:4000/posts/single/${postID}`);
   }
 
   deletePost(postID: string): Observable<any> {
-    return this.http.delete(`http://localhost:3500/products/delete/${postID}`);
+    return this.http.delete(`http://localhost:4000/posts/delete/${postID}`);
   }
 
   loadPost(postID: string): Observable<any> {

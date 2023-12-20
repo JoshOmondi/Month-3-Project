@@ -8,7 +8,7 @@ import { Observable, tap } from 'rxjs';
 })
 export class AuthService {
   constructor(private http: HttpClient) {}
-  private apiUrl = 'http://localhost:3500/users';
+  private apiUrl = 'http://localhost:4000/users';
   registerUser(user: User) {
     this.http.post(`${this.apiUrl}/register/`, user).subscribe((res) => {
       return res;
@@ -33,7 +33,7 @@ export class AuthService {
     });
 
     return this.http.get<UserDetails[]>(
-      'http://localhost:3500/users/userDetails/',
+      'http://localhost:4000/users/userDetails/',
       { headers }
     );
   }
