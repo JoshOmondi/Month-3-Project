@@ -1,10 +1,11 @@
 describe('template spec', () => {
   it('checks the registration authentication', () => {
-    cy.visit('https://localhost:4000/register');
+    cy.visit('http://localhost:4200/register');
     cy.get('.container');
-    cy.get('[data-cy="fullName"]');
-    cy.get('[data-cy="email"]');
-    cy.get('[data-cy="password"]');
-    cy.get('[data-cy="confirmpassword"]');
-  })
-})
+    cy.get('[data-cy="fullName"]').type('Joshua Omondi');
+    cy.get('[data-cy="email"]').type('joshuaomondi3334@gmail.com');
+    cy.get('[data-cy="password"]').type('12345678@Jo');
+    cy.get('[data-cy="confirmpassword"]').type('12345678@Jo');
+    cy.get('[data-cy="submit-btn"]').click();
+  });
+});
