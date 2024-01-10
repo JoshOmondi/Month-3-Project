@@ -2,7 +2,7 @@
 <div class="ml-20 mt-5 mb-4 mr-20 text-gray-800 border-b border-gray-300">
   <h1 class="ml-20 text-4xl flex font-bold align-center pb-2">New Post</h1>
 </div>
-<form class="p-4 md:p-5" [formGroup]="posts">
+<form class="p-4 md:p-5" [formGroup]="myForm" (ngSubmit)="onSubmit()">
   <div class="grid gap-4 mb-4 grid-cols-5 ml-20 mr-20">
     <div class="col-span-5">
       <label
