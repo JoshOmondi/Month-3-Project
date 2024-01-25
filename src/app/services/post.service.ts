@@ -8,11 +8,12 @@ import { tap, catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class PostService {
-  constructor(private http: HttpClient) {}
   private apiUrl = 'http://localhost:4000/posts/all';
 
-  createPost(Post: Posts): Observable<any> {
-    return this.http.post('http://localhost:4000/posts/create', Post);
+  constructor(private http: HttpClient) {}
+
+  createPost(postData: any): Observable<any> {
+    return this.http.post('http://localhost:4000/posts/create', postData);
   }
 
   getPosts(): Observable<any[]> {
@@ -24,10 +25,7 @@ export class PostService {
     console.log(postID);
 
     return this.http
-      .put<Posts>(
-        `http://localhost:4000/posts/update/${postID}`,
-        updatedPost
-      )
+      .put<Posts>(`http://localhost:4000/posts/update/${postID}`, updatedPost)
       .pipe(
         tap((updatedPost: Posts) => {
           console.log('Post updated on the server:', updatedPost);

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { PostService } from 'src/app/services/post.service'; 
 
 @Component({
   selector: 'app-posts',
@@ -9,16 +10,19 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 export class PostsComponent implements OnInit {
   myForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  constructor(private fb: FormBuilder, private postService: PostService) {}
 
-  onSubmit() {
+  ngOnInit(): void {
     this.myForm = this.fb.group({
       text: ['', Validators.required],
       image: ['', Validators.required],
-      // Add other form controls as needed
     });
+  }
+
+  onSubmit() {
+    this.postService.createPost(this.myForm.value).subscribe(
+      (response: any) => console.log(response),
+      (error: any) => console.error(error)
+    );
   }
 }
